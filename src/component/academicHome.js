@@ -34,7 +34,7 @@ componentDidMount(){
 }
 
 retrivePost(){
-  axios.get('/posts').then (res =>{
+  axios.get('https://staffmsapp.herokuapp.com/posts').then (res =>{
     if (res.data.success){
       this.setState({
         posts:res.data.existingPosts
