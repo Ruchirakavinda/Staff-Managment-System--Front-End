@@ -30,7 +30,7 @@ class NonPostDetails extends Component {
     componentDidMount(){
         const id = this.props.match.params.id;
 
-        axios.get(`/nonmember/${id}`).then((res) =>{
+        axios.get(`https://staffmsapp.herokuapp.com/nonmember/${id}`).then((res) =>{
             if(res.data.success){
 
                 this.setState({
@@ -45,7 +45,7 @@ class NonPostDetails extends Component {
 
     onDelete =(id3)=>{
         this.warningHide();
-         axios.delete(`/nonpost/delete/${id3}`).then((res)=>{
+         axios.delete(`https://staffmsapp.herokuapp.com/nonpost/delete/${id3}`).then((res)=>{
            this.setState(
              {
                  basicModal:true,

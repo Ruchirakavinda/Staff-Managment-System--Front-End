@@ -30,7 +30,7 @@ class PostDetails extends Component {
     componentDidMount(){
         const id = this.props.match.params.id;
 
-        axios.get(`/member/${id}`).then((res) =>{
+        axios.get(`https://staffmsapp.herokuapp.com/member/${id}`).then((res) =>{
             if(res.data.success){
 
                 this.setState({
@@ -45,7 +45,7 @@ class PostDetails extends Component {
 
     onDelete =(id3)=>{
         this.warningHide();
-         axios.delete(`/post/delete/${id3}`).then((res)=>{
+         axios.delete(`https://staffmsapp.herokuapp.com/post/delete/${id3}`).then((res)=>{
            this.setState(
              {
                  basicModal:true,

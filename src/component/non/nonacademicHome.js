@@ -34,7 +34,7 @@ componentDidMount(){
 }
 
 retrivePost(){
-  axios.get('/nonposts').then (res =>{
+  axios.get('https://staffmsapp.herokuapp.com/nonposts').then (res =>{
     if (res.data.success){
       this.setState({
         posts:res.data.existingPosts
@@ -88,7 +88,7 @@ filterData(posts,searchKey){
 handleSearch = (e) =>{
   const searchKey = e.currentTarget.value
 
-  axios.get('/nonposts').then (res =>{
+  axios.get('https://staffmsapp.herokuapp.com/nonposts').then (res =>{
     if (res.data.success){
     
       this.filterData(res.data.existingPosts,searchKey)
@@ -99,7 +99,7 @@ handleSearch = (e) =>{
 
 onDelete =(id3)=>{
  this.warningHide();
-  axios.delete(`/nonpost/delete/${id3}`).then((res)=>{
+  axios.delete(`https://staffmsapp.herokuapp.com/nonpost/delete/${id3}`).then((res)=>{
     this.setState(
       {
           basicModal:true,

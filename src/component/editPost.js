@@ -71,7 +71,7 @@ class EditPost extends Component {
 
 
 
-            axios.put(`/post/update/${id}`,data).then((res) =>{
+            axios.put(`https://staffmsapp.herokuapp.com/post/update/${id}`,data).then((res) =>{
                 if(res.data.success){
                     this.setState(
                         {
@@ -95,7 +95,7 @@ class EditPost extends Component {
     componentDidMount(){
         const id = this.props.match.params.id;
 
-        axios.get(`/member/${id}`).then((res) =>{
+        axios.get(`https://staffmsapp.herokuapp.com/member/${id}`).then((res) =>{
             if(res.data.success){
 
                 this.setState({

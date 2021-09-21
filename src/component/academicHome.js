@@ -88,7 +88,7 @@ filterData(posts,searchKey){
 handleSearch = (e) =>{
   const searchKey = e.currentTarget.value
 
-  axios.get('/posts').then (res =>{
+  axios.get('https://staffmsapp.herokuapp.com/posts').then (res =>{
     if (res.data.success){
     
       this.filterData(res.data.existingPosts,searchKey)
@@ -99,7 +99,7 @@ handleSearch = (e) =>{
 
 onDelete =(id3)=>{
  this.warningHide();
-  axios.delete(`/post/delete/${id3}`).then((res)=>{
+  axios.delete(`https://staffmsapp.herokuapp.com/post/delete/${id3}`).then((res)=>{
     this.setState(
       {
           basicModal:true,

@@ -73,7 +73,7 @@ class CreatPost extends Component {
 
 
 
-            axios.post("/post/save",data).then((res) =>{
+            axios.post("https://staffmsapp.herokuapp.com/post/save",data).then((res) =>{
                 if(res.data.success){
                     this.setState(
                         {

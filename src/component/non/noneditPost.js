@@ -71,7 +71,7 @@ class NonEditPost extends Component {
 
 
 
-            axios.put(`/nonpost/update/${id}`,data).then((res) =>{
+            axios.put(`https://staffmsapp.herokuapp.com/nonpost/update/${id}`,data).then((res) =>{
                 if(res.data.success){
                     this.setState(
                         {
@@ -95,7 +95,7 @@ class NonEditPost extends Component {
     componentDidMount(){
         const id = this.props.match.params.id;
 
-        axios.get(`/nonmember/${id}`).then((res) =>{
+        axios.get(`https://staffmsapp.herokuapp.com/nonmember/${id}`).then((res) =>{
             if(res.data.success){
 
                 this.setState({

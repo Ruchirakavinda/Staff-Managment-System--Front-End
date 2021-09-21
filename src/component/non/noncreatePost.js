@@ -73,7 +73,7 @@ class NonCreatPost extends Component {
 
 
 
-            axios.post("/nonpost/save",data).then((res) =>{
+            axios.post("https://staffmsapp.herokuapp.com/nonpost/save",data).then((res) =>{
                 if(res.data.success){
                     this.setState(
                         {
